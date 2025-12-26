@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //if (!localStorage.getItem('birthdayUser')) {
         //window.location.href = '../index.html';
     //}
-//});
+});
 
 
 
