@@ -76,39 +76,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Function to create confetti
-function createConfetti() {
-    const confettiContainer = document.querySelector('.confetti-container');
-    const colors = ['#ff5252', '#ffeb3b', '#2196f3', '#4caf50', '#9c27b0'];
-    
-    for (let i = 0; i < 100; i++) {
-        const confetti = document.createElement('div');
-        confetti.style.width = Math.random() * 10 + 5 + 'px';
-        confetti.style.height = Math.random() * 10 + 5 + 'px';
-        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
-        confetti.style.position = 'absolute';
-        confetti.style.top = '-50px';
-        confetti.style.left = Math.random() * 100 + 'vw';
-        confetti.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
-        confetti.style.opacity = Math.random() + 0.5;
-        
-        // Animation
-        confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear infinite`;
-        confetti.style.animationDelay = Math.random() * 5 + 's';
-        
-        confettiContainer.appendChild(confetti);
-    }
+// 生成雪花的函数
+function createSnowflakes(count) {
+  const container = document.querySelector('.confetti-container');
+  // 清空旧的纸屑
+  container.innerHTML = '';
+
+  for (let i = 0; i < count; i++) {
+    const snowflake = document.createElement('div');
+    snowflake.classList.add('snowflake');
+
+    // 随机位置、大小、动画时长
+    const size = Math.random() * 10 + 5; // 雪花大小 5-15px
+    const left = Math.random() * 100; // 水平位置 0-100%
+    const delay = Math.random() * 5; // 动画延迟 0-5s
+    const duration = Math.random() * 10 + 5; // 飘落时长 5-15s
+
+    snowflake.style.width = `${size}px`;
+    snowflake.style.height = `${size}px`;
+    snowflake.style.left = `${left}%`;
+    snowflake.style.animationDelay = `${delay}s`;
+    snowflake.style.animationDuration = `${duration}s`;
+
+    container.appendChild(snowflake);
+  }
 }
 
-// Add CSS for confetti animation
-const style = document.createElement('style');
-style.textContent = `
-@keyframes fall {
-    0% {
-        transform: translateY(-50px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-    }
-}`;
+// 页面加载时生成50片雪花
+window.addEventListener('load', () => {
+  createSnowflakes(50);
+});
+
+// 点击播放音乐按钮也触发雪花
+document.getElementById('play-music').addEventListener('click', () => {
+  createSnowflakes(50);
+});
+
 document.head.appendChild(style); 
