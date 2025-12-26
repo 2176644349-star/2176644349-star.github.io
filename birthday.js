@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set personalized greeting
     greeting.textContent = `${username}，圣诞快乐！`;
-    birthdayMessage.textContent = `亲爱的${username}，祝你圣诞快乐，身体健康，心想事成！！！`;
+    birthdayMessage.textContent = `祝大家圣诞快乐，身体健康，心想事成！！！`;
     
     // 设置署名
     if (signatureElement) {
