@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const username = localStorage.getItem('birthdayUser') || '朋友';
     
     // Set personalized greeting
-    greeting.textContent = `${username}，圣诞快乐！`;
+    greeting.textContent = `圣诞快乐！`;
     birthdayMessage.textContent = `祝大家圣诞快乐，身体健康，心想事成！！！`;
     
     // 设置署名
