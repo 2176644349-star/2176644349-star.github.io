@@ -80,41 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// 生成雪花的函数
-function createSnowflakes(count) {
-  const container = document.querySelector('.confetti-container');
-  // 清空旧的纸屑
-  container.innerHTML = '';
 
-  for (let i = 0; i < count; i++) {
-    const snowflake = document.createElement('div');
-    snowflake.classList.add('snowflake');
 
-    // 随机位置、大小、动画时长
-    const size = Math.random() * 10 + 5; // 雪花大小 5-15px
-    const left = Math.random() * 100; // 水平位置 0-100%
-    const delay = Math.random() * 5; // 动画延迟 0-5s
-    const duration = Math.random() * 10 + 5; // 飘落时长 5-15s
-
-    snowflake.style.width = `${size}px`;
-    snowflake.style.height = `${size}px`;
-    snowflake.style.left = `${left}%`;
-    snowflake.style.animationDelay = `${delay}s`;
-    snowflake.style.animationDuration = `${duration}s`;
-
-    container.appendChild(snowflake);
-  }
-}
-
-// 页面加载时生成50片雪花
-window.addEventListener('load', () => {
-  createSnowflakes(100);
-});
-
-// 点击播放音乐按钮也触发雪花
-document.getElementById('play-music').addEventListener('click', () => {
-  createSnowflakes(50);
-});
 
 
 
