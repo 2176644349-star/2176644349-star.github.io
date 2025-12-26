@@ -237,6 +237,10 @@ body {
     animation-delay: 8s;
 }
 
+
+
+
+
 /* Confetti */
 /* 雪花样式 */
 .snowflake {
@@ -261,6 +265,11 @@ body {
     opacity: 0;
   }
 }
+
+
+
+
+
 
 /* Animations */
 @keyframes fadeIn {
