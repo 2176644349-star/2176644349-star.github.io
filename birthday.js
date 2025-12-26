@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to create confetti
 function createConfetti() {
-    const confettiContainer = document.querySelector('.confetti-container');
+    const confettiContainer = document.querySelector('.snowflake');
     const colors = ['#ff5252', '#ffeb3b', '#2196f3', '#4caf50', '#9c27b0'];
     
     for (let i = 0; i < 100; i++) {
