@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const username = localStorage.getItem('birthdayUser') || '朋友';
     
     // Set personalized greeting
-    greeting.textContent = `${username}，生日快乐！`;
-    birthdayMessage.textContent = `亲爱的${username}，祝你生日快乐，年年有今日，岁岁有今朝！！！`;
+    greeting.textContent = `${username}，圣诞快乐！`;
+    birthdayMessage.textContent = `亲爱的${username}，祝你圣诞快乐，身体健康，心想事成！！！`;
     
     // 设置署名
     if (signatureElement) {
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (playPromise !== undefined) {
             playPromise.then(() => {
                 // 自动播放成功
-                playMusicBtn.textContent = '暂停生日快乐歌';
+                playMusicBtn.textContent = '暂停圣诞歌';
             }).catch(error => {
                 // 自动播放被阻止
                 console.log("自动播放被阻止，用户需要点击播放按钮:", error);
@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
     playMusicBtn.addEventListener('click', function() {
         if (birthdaySong.paused) {
             birthdaySong.play();
-            playMusicBtn.textContent = '暂停生日快乐歌';
+            playMusicBtn.textContent = '暂停圣诞歌';
         } else {
             birthdaySong.pause();
-            playMusicBtn.textContent = '奏响生日快乐歌';
+            playMusicBtn.textContent = '奏响圣诞歌';
         }
         
         // 显示祝福文本，添加淡入效果
