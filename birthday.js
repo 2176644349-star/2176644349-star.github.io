@@ -71,9 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
     createConfetti();
     
     // If user didn't go through login page, redirect to login
-    if (!localStorage.getItem('birthdayUser')) {
-        window.location.href = '../index.html';
-    }
+    //if (!localStorage.getItem('birthdayUser')) {
+        //window.location.href = '../index.html';
+    //}
 });
 
 // Function to create confetti
