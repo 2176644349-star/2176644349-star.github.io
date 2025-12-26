@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 设置署名
     if (signatureElement) {
-        signatureElement.textContent = `——永远祝福你的朋友`;
+        signatureElement.textContent = `——永远祝福你的老友`;
     }
     
     // 初始隐藏祝福文本
@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
     createConfetti();
     
     // If user didn't go through login page, redirect to login
-    //if (!localStorage.getItem('birthdayUser')) {
-        //window.location.href = '../index.html';
+    if (!localStorage.getItem('birthdayUser')) {
+        window.location.href = '../index.html';
     //}
 });
 
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to create confetti
 function createConfetti() {
-    const confettiContainer = document.querySelector('.snowflake');
+    const confettiContainer = document.querySelector('.confetti-container');
     const colors = ['#ff5252', '#ffeb3b', '#2196f3', '#4caf50', '#9c27b0'];
     
     for (let i = 0; i < 100; i++) {
