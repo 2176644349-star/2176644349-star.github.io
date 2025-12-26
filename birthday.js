@@ -108,7 +108,7 @@ function createSnowflakes(count) {
 
 // 页面加载时生成50片雪花
 window.addEventListener('load', () => {
-  createSnowflakes(50);
+  createSnowflakes(100);
 });
 
 // 点击播放音乐按钮也触发雪花
